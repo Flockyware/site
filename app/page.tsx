@@ -4,10 +4,10 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="text-emerald-50 border-amber-300 border-4 my-10 mx-auto  w-100 hover:animate-wiggle  " >
+      <div className="text-emerald-50 border-amber-300 flex border-2 my-10  " >
         
         
-        <span className="w-52">
+        <div className="w-80 border-2 ">
           <div className=" justify-center">
             <span className="font-bold text-5xl text ">
               Hi!
@@ -21,9 +21,12 @@ export default function Home() {
           <div className=" border-2 ">
             Game Developer 🕹
           </div>
-        </span>
+        </div>
 
-        
+        <div className="ml-auto">
+
+          <Image className=" " src={"https://picsum.photos/id/1/300/300"} width={300} height={300} alt="placeholder"></Image>
+        </div>
 
       </div>
     </>
