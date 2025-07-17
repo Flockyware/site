@@ -4,13 +4,28 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-    <div className="bg-amber-300 text-blue-950 s sm:m-28 md:m-32  flex justify-center" >
-      
-      <div className="h-80">
-        Hellow world
-      </div>
+      <div className="text-emerald-50 border-amber-300 border-4 my-10 mx-auto  w-100 hover:animate-wiggle  " >
+        
+        
+        <span className="w-52">
+          <div className=" justify-center">
+            <span className="font-bold text-5xl text ">
+              Hi!
+            </span>
 
-    </div>
+            <span className="ml-5 text-5xl">
+              I'm Robert
+            </span>
+          </div>
+
+          <div className=" border-2 ">
+            Game Developer 🕹
+          </div>
+        </span>
+
+        
+
+      </div>
     </>
   );
 }
