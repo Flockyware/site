@@ -14,8 +14,8 @@ export default function NavBarItem({title, href}: NavBarItemProps) {
   return (
     <>
         
-      <Link className="bg-blue-950 text-amber-50 w-30 h-15 ml-5 rounded-2xl flex justify-center align-text-bottom" href={href}>
-        <div className="m-auto">
+      <Link className=" text-moon-500 border-2 w-25 h-8 ml-5 rounded-2xl flex justify-center align-text-bottom" href={href}>
+        <div className="m-auto underline">
           {title}
         </div>
       </Link>

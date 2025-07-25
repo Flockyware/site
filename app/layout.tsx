@@ -5,6 +5,7 @@ import NavBar from "@/components/navbar";
 import '@fontsource-variable/reem-kufi-fun'; // Supports weights 400-700
 import '@fontsource/comic-mono';
 import '@fontsource/bubblegum-sans';
+import Footer from "@/components/footer";
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -27,11 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="mt-10 px-20 border-4 border-emerald-400">
+      <body className="my-10 mx-10 ">
         <NavBar></NavBar>
-        
-        {/*stuff goes here*/}
-        {children}
+        <div className="bg-bavaroa-500 border-2 border-emerald-400">
+          {/*stuff goes here*/}
+          {children}
+        </div>
+      <Footer></Footer>
       </body>
     </html>
   );

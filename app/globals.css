@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
 @theme{
   --animate-wiggle: wiggle 1s ease-in-out infinite;  
@@ -18,11 +18,22 @@
     }
       
   }
+
+  --color-moon-500: #1c2638;
+
+  --color-lighty-500: #fcfcfc;
+  
+  --color-bavaroa-500: #EE1643;
+
+
+
+
+  
 }
 
-body {
-  background: #0a0a0a;
-  
+html {
+
+  background: #000000; /* hehe fc, fizzy */
   font-family: 'Bubblegum Sans', sans-serif;
 
   /* background: var(--background);

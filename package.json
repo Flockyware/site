@@ -10,11 +10,15 @@
   },
   "dependencies": {
     "@fontsource-variable/reem-kufi-fun": "^5.2.9",
+    "@fontsource-variable/roboto": "^5.2.6",
+    "@fontsource-variable/roboto-mono": "^5.2.6",
     "@fontsource/bubblegum-sans": "^5.2.6",
     "@fontsource/comic-mono": "^5.2.5",
+    "@fontsource/londrina-solid": "^5.2.6",
     "next": "15.3.5",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-howler": "^5.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

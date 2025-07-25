@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function NavBar() {
   return (
     <>
-    <div className="flex justify-end " >
+    <div className="flex justify-end bg-amber-100" >
 
         <NavBarItem href={"/"} title={"Home"}></NavBarItem>
         <NavBarItem href={"/"} title={"About"}></NavBarItem>
