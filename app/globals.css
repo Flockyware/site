@@ -24,6 +24,8 @@
   --color-lighty-500: #fcfcfc;
   
   --color-bavaroa-500: #EE1643;
+  
+  --color-miku-500: #00ddc0;
 
 
 
@@ -33,8 +35,9 @@
 
 html {
 
-  background: #000000; /* hehe fc, fizzy */
-  font-family: 'Bubblegum Sans', sans-serif;
+  background:  #dcdcdc; /* hehe fc, fizzy */
+  font-family: 'Londrina Solid', system-ui;
+  /* font-family: 'Bubblegum Sans', sans-serif; */
 
   /* background: var(--background);
   color: var(--foreground);

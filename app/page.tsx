@@ -4,18 +4,18 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="text-moon-500 border-amber-300 border-0  flex  my-10  " >
+      <div className="text-white border-amber-300 border-0  flex mt-3 " >
         
         
-        <div className="w-80 border-0 ">
+        <div className="ml-5 w-80 border-0 ">
           
           <div className=" justify-center">
-            <span className="font-bold text-5xl text ">
+            <span className=" text-5xl text ">
               Hi!
             </span>
 
             <span className="ml-5 text-5xl">
-              I'm Robert
+              I'm Flocky
             </span>
           </div>
 
@@ -33,8 +33,13 @@ export default function Home() {
             alt="placeholder"
           />
         </div>
-
+        
       </div>
+
+{/*       
+      <div className="bg-moon-500 rounded-t-3xl  h-4 mt-8">
+
+      </div> */}
     </>
   );
 }

@@ -10,11 +10,12 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-    <div className="bg-moon-500 flex rounded-t-2xl     justify-center">
-        <div className="m-auto text-lighty-500 border-1">
-            idk what am doing
-        </div>
+    <div className="bg-moon-500 flex justify-center">
 
+      <div className="m-auto text-lighty-500 border-1">
+        idk what am doing
+      </div>
+      
     </div>
     </>
   );
