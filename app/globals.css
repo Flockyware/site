@@ -27,6 +27,9 @@
   
   --color-miku-500: #00ddc0;
 
+/* 
+  --text-1xl:  */
+
 
 
 
@@ -35,8 +38,9 @@
 
 html {
 
-  background:  #dcdcdc; /* hehe fc, fizzy */
+  background:  #070707; /* hehe fc, fizzy */
   font-family: 'Londrina Solid', system-ui;
+  font-weight: 400;
   /* font-family: 'Bubblegum Sans', sans-serif; */
 
   /* background: var(--background);

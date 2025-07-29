@@ -27,9 +27,9 @@ export default function Home() {
 
         <div className="ml-auto">
           <Image className=" " 
-            src={"https://picsum.photos/id/1/300/300"} 
-            width={300} 
-            height={300} 
+            src={"https://picsum.photos/id/1/200/200"} 
+            width={200} 
+            height={200} 
             alt="placeholder"
           />
         </div>
