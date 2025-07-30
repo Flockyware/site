@@ -34,11 +34,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="">
         <NavBar></NavBar>
-        <div className="bg-indigo-900 bg-opacity-50 border-0 border-emerald-400 max-w-lg mx-auto">
-          {/*stuff goes here*/}
-          {children}
-        </div>
-        <Footer></Footer>
+        {children}
+        
+        {/* <Footer></Footer> */}
       </body>
     </html>
   );
