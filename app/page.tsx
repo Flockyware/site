@@ -7,7 +7,7 @@ export default function Home() {
       <div className="bg-indigo-900 bg-opacity-50 border-0 border-emerald-400 max-w-4xl mx-auto ">
 
 
-        <div className="text-white border-amber-300 border-0  flex mt-3 " >
+        <div className="text-white border-amber-300 border-1 flex mt-3 " >
 
 
           <div className="ml-5 w-80 border-0 mt-15">
