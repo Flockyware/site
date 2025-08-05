@@ -4,22 +4,21 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className=" bg-opacity-50 border-0 border-emerald-400 max-w-4xl mx-auto ">
+      <div className=" bg-opacity-50 border-1 border-emerald-400 max-w-4xl mx-auto ">
 
 
         <div className="text-white border-amber-300 border-0 flex mt-3 " >
 
 
-          <div className="ml-5 w-80 border-0 mt-15">
+          <div className="ml-5 max-w-120 border-0 mt-15">
 
             <div className=" justify-center">
-              <span className=" text-7xl">
-                Hi!
-              </span>
-
-              <span className="ml-5 text-7xl">
+              <h1 className="text-7xl">
+                Hi! 
+              </h1>
+              <h1 className="text-7xl">
                 I'm Flocky
-              </span>
+              </h1>
             </div>
 
             <div className=" border-0 text-2xl font-light">

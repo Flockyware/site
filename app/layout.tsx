@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="">
+      <body className=" max-lg:mx-5">
         <NavBar></NavBar>
         {children}
         

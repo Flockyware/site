@@ -19,11 +19,15 @@ export default function NavBarItem({title, href}: NavBarItemProps) {
 
   return (
     <>
-      <div className="text-amber-50  w-auto h-10 ml-5 text-3xl font-light border-0 flex justify-center align-text-bottom">
+      <div className="text-amber-50  w-auto h-10 ml-5 text-3xl font-light border-0 flex justify-center align-text-bottom
+                       transition  duration-150 ease-in-out hover:scale-102 ">
 
 
         {
-         (pathname == href.toString()) ?<Link className="my-auto text-bavaroa-500" href={href}>{title}</Link> : <Link className="my-auto" href={href}>{title}</Link>
+         (pathname == href.toString()) ?
+         <Link className="my-auto text-bavaroa-500 underline" href={href}>{title}</Link> 
+         : 
+          <Link className="my-auto " href={href}>{title}</Link>
         }
 
       </div>
