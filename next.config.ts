@@ -5,7 +5,9 @@ const nextConfig: NextConfig = {
   images:{
     remotePatterns: [{hostname: "picsum.photos"}],
   },
-  
+  experimental:{
+    globalNotFound: true
+  }
   
 };
 
