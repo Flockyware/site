@@ -10,9 +10,12 @@ export default function Home() {
           </h2>
 
         <div className="bg-panel-trans border-2 p-4 rounded-md">          
-          <div>
+          
+          <div className="border-4 flex justify-center ">
             <CallingCard/>
           </div>
+      
+          
           <p className="text-xl/normal font-light">
 
             Im a independent software and game developer,
