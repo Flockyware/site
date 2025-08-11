@@ -13,17 +13,15 @@ export default function Home() {
           <div className="ml-5 max-w-120 border-0 mt-15">
 
             <div className=" justify-center">
-              <h1 className="text-7xl">
-                Hi! 
+              <h1 className="text-primary/25">
+                Hi! I'm Flocky
               </h1>
-              <h1 className="text-7xl">
-                I'm Flocky
+              <h1 className="text-secondary">
+                I enjoy making <span className="animate-rainbow-effect">stuff ❤</span> 
               </h1>
             </div>
 
-            <div className=" border-0 text-2xl font-light">
-              Welcome to my site, 
-            </div>
+
             
 
           </div>

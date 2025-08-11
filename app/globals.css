@@ -2,7 +2,8 @@
 
 :root {
   --background: #2727273b;
-  --foreground: #171717;
+  --foreground:oklch(98.7% 0.022 95.277);
+  /* --idk: #171717; */
 }
 
 @theme{
@@ -18,7 +19,6 @@
     }
       
   }
-
   --animate-hover-wiggle: hover_wiggle 4s ease-in; 
   @keyframes hover_wiggle{    
     0%,    
@@ -34,12 +34,38 @@
 
       
   }
+  --animate-rainbow-effect: rainbow-effect 3s linear infinite; 
+  @keyframes rainbow-effect{    
+    0%{
+      color:purple;
+    },    
+    16%{
+      color:red;
+    }
+    33%{
+      color:yellow;
+    }
+    50%{
+      color:orange;
+    }
+    66%{
+      color:green;
+    }
+    82%{
+      color:blue;
+    }
+    100%{
+      color:purple;
+    }
+      
+  }
+
+  --text-primary: 5.5rem;
+  --text-secondary: 3rem;
 
 
   --color-moon-500: #1c2638;
-
   --color-lighty-500: #fcfcfc;
-  
   --color-bavaroa-500: #EE1643;
   --color-panel-trans: var(--background);
   --color-miku-500: #00ddc0;
@@ -56,7 +82,7 @@
 html {
   
   background:  #070707; /* hehe fc, fizzy */
-  color: aqua;
+  color: oklch(98.7% 0.022 95.277);
   font-family: 'Londrina Solid', system-ui;
   font-weight: 400;
   /* font-family: 'Bubblegum Sans', sans-serif; */
@@ -64,10 +90,15 @@ html {
   /* background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif; */
-  
+}
 
+h3{
+  margin-top: 1rem;
 
+}
 
+p{
+  margin-top: 0.5rem;
 }
 
 
