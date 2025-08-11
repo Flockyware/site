@@ -11,9 +11,9 @@ export default function Home() {
 
         <div className="bg-panel-trans border-2 p-4 rounded-md">          
           
-          <div className="border-4 flex justify-center ">
-            <CallingCard/>
-          </div>
+          
+          <CallingCard/>
+          
       
           
           <p className="text-xl/normal font-light">
