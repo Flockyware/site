@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className=" bg-opacity-50 border-1 border-emerald-400 max-w-4xl mx-auto ">
+      <div className=" bg-opacity-50  max-w-4xl mx-auto border-4 border-emerald-200">
 
 
         <div className="text-white border-amber-300 border-0 flex mt-3 " >
@@ -17,7 +17,7 @@ export default function Home() {
                 Hi! I'm Flocky
               </h1>
               <h1 className="text-secondary">
-                I enjoy making <span className="animate-rainbow-effect">stuff ❤</span> 
+                I enjoy making <span className="animate-rainbow-effect">stuff</span> <span className="animate-rainbow-effect duration-200 hover:text-7xl">❤</span> 
               </h1>
             </div>
 
@@ -37,10 +37,7 @@ export default function Home() {
         </div>
 
       </div>
-      {/*       
-      <div className="bg-moon-500 rounded-t-3xl  h-4 mt-8">
 
-      </div> */}
     </>
   );
 }

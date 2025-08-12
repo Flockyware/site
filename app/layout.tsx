@@ -3,12 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/navbar";
 import '@fontsource-variable/reem-kufi-fun'; // Supports weights 400-700
-import '@fontsource/comic-mono';
 import '@fontsource/londrina-solid/100.css';
 import '@fontsource/londrina-solid/300.css';
 import '@fontsource/londrina-solid/400.css';
 import '@fontsource/londrina-solid/900.css';
-//import '@fontsource/bubblegum-sans';
 import Footer from "@/components/footer";
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -32,11 +30,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className=" max-lg:mx-5">
-        <NavBar></NavBar>
+      <body className=" max-w-4xl relative mx-auto  ">
+        <NavBar/>
+
         {children}
         
-        {/* <Footer></Footer> */}
+        <Footer>
+          Hello World
+        </Footer>
       </body>
     </html>
   );

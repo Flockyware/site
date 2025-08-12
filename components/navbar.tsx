@@ -9,7 +9,7 @@ export default function NavBar() {
     <>
 
 
-      <div className="flex justify-end max-w-4xl mx-auto mt-5 mb-10  border-1 " >
+      <div className="flex justify-end  mt-5 mb-10 h-auto " >
         
         {/* <div className="bg-red-600 flex w-2 mr-auto ">
 
