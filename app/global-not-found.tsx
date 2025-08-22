@@ -1,12 +1,18 @@
 import Link from "next/link";
+import "./globals.css";
+import Image from "next/image";
 
 export default function GlobalNotFound() {
   return (
     <html>
-      <body>
-        <h1>404 - Page Not Found</h1>
-        <p>This page does not exist.</p>
-        <Link href={"/"}>return Home</Link>
+      <body className="items-center-safe justify-center flex h-screen ">
+        <Image
+        className="mx-auto  scale-700 dog"
+        src={"https://deltarune.com/assets/images/dog-maraca.gif"}
+        width={27}
+        height={12}
+        alt="dog"
+        ></Image>
       </body>
     </html>
   )

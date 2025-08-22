@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className=" bg-opacity-50  max-w-4xl mx-auto border-4 border-emerald-200">
+      <div className=" bg-opacity-50  border-0 border-red-500 my-auto">
 
 
         <div className="text-white border-amber-300 border-0 flex mt-3 " >
@@ -12,13 +12,16 @@ export default function Home() {
 
           <div className="ml-5 max-w-120 border-0 mt-15">
 
-            <div className=" justify-center">
-              <h1 className="text-primary/25">
+            <div className=" justify-center items-center">
+              
+              <h1 className="text-primary/25 w-full">
                 Hi! I'm Flocky
               </h1>
-              <h1 className="text-secondary">
-                I enjoy making <span className="animate-rainbow-effect">stuff</span> <span className="animate-rainbow-effect duration-200 hover:text-7xl">❤</span> 
+
+              <h1 className="text-secondary items-center-safe text-center border-0 py-auto flex">
+                I enjoy making <span className="ml-2 animate-rainbow-effect border-0 flex"> stuff <span className="duration-200 hover:text-7xl border-0">❤</span></span>   
               </h1>
+
             </div>
 
 
@@ -28,7 +31,8 @@ export default function Home() {
 
           <div className="ml-auto">
             <Image className=" "
-              src={"https://picsum.photos/id/1/300/300"}
+              // unoptimized = {true}
+              src={"https://picsum.photos/300"}
               width={300}
               height={300}
               alt="placeholder"

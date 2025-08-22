@@ -30,14 +30,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className=" max-w-4xl relative mx-auto  ">
+      <body className=" max-w-4xl mx-auto max-h-screen h-screen flex flex-col">
         <NavBar/>
 
         {children}
         
-        <Footer>
-          Hello World
-        </Footer>
+        <Footer/>
       </body>
     </html>
   );

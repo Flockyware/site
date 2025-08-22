@@ -9,11 +9,7 @@ export default function NavBar() {
     <>
 
 
-      <div className="flex justify-end  mt-5 mb-10 h-auto " >
-        
-        {/* <div className="bg-red-600 flex w-2 mr-auto ">
-
-        </div> */}
+      <div className="flex items-center-safe justify-end border-0  h-auto mt-5 " >
 
         <NavBarItem href={"/"} title={"Home"}></NavBarItem>
         <NavBarItem href={"/about"} title={"About"}></NavBarItem>

@@ -3,10 +3,20 @@
 :root {
   --background: #2727273b;
   --foreground:oklch(98.7% 0.022 95.277);
+
+  --navbar-h:
+  /* remember to make variable to navbar mainpage and footer for when you finished making them*/
+  
+
   /* --idk: #171717; */
 }
 
+
+
+
+
 @theme{
+
   --animate-wiggle: wiggle 1s ease-in-out infinite;  
   @keyframes wiggle {    
     0%,    
@@ -34,6 +44,7 @@
 
       
   }
+  
   --animate-rainbow-effect: rainbow-effect 3s linear infinite; 
   @keyframes rainbow-effect{    
     0%{
@@ -60,8 +71,11 @@
       
   }
 
+  --spacing-main: calc(100vh - 40px - 100px );
+
   --text-primary: 5.5rem;
   --text-secondary: 3rem;
+  --text-navbar-opt: 2.5rem;
 
 
   --color-moon-500: #1c2638;
@@ -69,9 +83,6 @@
   --color-bavaroa-500: #EE1643;
   --color-panel-trans: var(--background);
   --color-miku-500: #00ddc0;
-
-/* 
-  --text-1xl:  */
 
 
 
@@ -99,6 +110,16 @@ h3{
 
 p{
   margin-top: 0.5rem;
+  font-weight: var(--font-weight-light);
+  font-size: var(--text-xl);
+  line-height: calc(var(--spacing) * 5); /* 1.25rem = 20px */
 }
+
+.dog{
+  position: absolute;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
 
 
