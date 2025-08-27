@@ -13,35 +13,35 @@ import { FaItchIo } from "react-icons/fa";
 
 export default function Footer() {
 
-  const iconClasses: string = "size-11 border-0 m-auto min hover:scale-110 duration-200"
+  const iconClasses: string = "size-9 border-0 m-auto min hover:scale-112 duration-200"
 
   return (
 
-    <div className="justify-center w-full border-0 py-6 border-blue-800">
+    <div className="justify-center w-full border-4 py-6 border-blue-800">
 
-      <div className="flex text-3xl font-light border-0 justify-center-safe">
+      <div className="flex text-3xl font-light border-0 justify-center-safe ">
         {"My socials"}
       </div>
 
-      <div className="flex border-0 justify-center-safe px-70 ">
+      <div className=" justify-center-safe mt-2 border-4 border-amber-300">
 
-        <a href="https://github.com/Flockyware" className={iconClasses} target="_blank">
-          <IoLogoGithub className={iconClasses} />
-        </a>
+        <div className="flex w-1/3 mx-auto">
+          <a href="https://github.com/Flockyware" className={iconClasses} target="_blank">
+            <IoLogoGithub className={iconClasses} />
+          </a>
 
-        <a href="https://github.com/Flockyware" className={iconClasses} target="_blank">
-          <FaBluesky className={iconClasses} />
-        </a>
+          <a href="https://github.com/Flockyware" className={iconClasses} target="_blank">
+            <FaBluesky className={iconClasses} />
+          </a>
 
-        <a href="https://github.com/Flockyware" className={iconClasses} target="_blank">
-          <FaYoutube className={iconClasses} />
-        </a>
+          <a href="https://github.com/Flockyware" className={iconClasses} target="_blank">
+            <FaYoutube className={iconClasses} />
+          </a>
 
-
-        <a href="https://github.com/Flockyware" className={iconClasses} target="_blank">
-          <FaItchIo className={iconClasses} />
-        </a>
-
+          <a href="https://github.com/Flockyware" className={iconClasses} target="_blank">
+            <FaItchIo className={iconClasses} />
+          </a>
+        </div>
 
       </div>
     </div>

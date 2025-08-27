@@ -4,11 +4,11 @@ export default function CallingCard() {
   return (
     <>
 
-      <div className="justify-center  border-2 p-2 flex rounded-2xl max-w-165 mx-auto">
+      <div className="justify-center  border-2 p-3 flex rounded-2xl max-w-165 mx-auto mt-10 ">
         <div className="border-2 rounded-full flex h-min">
           <Image
             className="rounded-full duration-250 hover:scale-105"
-            src={"https://picsum.photos/150"}
+            src={"/logo.svg"}
             width={150}
             height={150}
             alt="placeholder"

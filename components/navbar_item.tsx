@@ -25,7 +25,7 @@ export default function NavBarItem({title, href}: NavBarItemProps) {
 
         {
          (pathname == href.toString()) ?
-         <Link className="my-auto text-bavaroa-500 underline" href={href}>{title}</Link> 
+         <Link className="my-auto text-bavaroa-500 underline" href={href} > {title} </Link> 
          : 
           <Link className="my-auto " href={href}>{title}</Link>
         }
