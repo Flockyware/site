@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #2727273b;
-  --foreground:oklch(98.7% 0.022 95.277);
+  --background: oklch(98.7% 0.022 95.277);
+  --foreground: #da0c35;
 
-  --navbar-h:
+ 
   /* remember to make variable to navbar mainpage and footer for when you finished making them*/
   /* --idk: #171717; */
 }
@@ -12,15 +12,17 @@
 
 @theme{
 
-  --animate-wiggle: wiggle 1s ease-in-out infinite;  
+  --animate-wiggle: wiggle 1.8s ease-in-out infinite;  
   @keyframes wiggle {    
-    0%,    
-    
-    100% {      
-      transform: rotate(-3deg);    
-    }    
+    0%{
+      transform: translate(0%, -8%);  
+    }      
     50% {      
-      transform: rotate(3deg);    
+      transform: translate(0%, 8%);    
+    }
+    100%{
+      transform: translate(0%, -8%);  
+  
     }
       
   }
@@ -76,6 +78,8 @@
   --color-moon-500: #1c2638;
   --color-lighty-500: #fcfcfc;
   --color-bavaroa-500: #EE1643;
+  --color-bavaroa-800: #da0c35;
+
   --color-panel-trans: var(--background);
   --color-miku-500: #00ddc0;
 
@@ -83,8 +87,8 @@
 
 html {
   
-  background:  #070707; /* hehe fc, fizzy */
-  color: oklch(98.7% 0.022 95.277);
+  background:   /* hehe fc, fizzy */#f6f5f1;
+  color: #070707;
   font-family: 'Londrina Solid', system-ui;
   font-weight: 400;
   /* font-family: 'Bubblegum Sans', sans-serif; */
@@ -92,12 +96,21 @@ html {
   /* background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif; */
+  scrollbar-width: none; /* Firefox */
 }
 
 
-p{
-  margin-top: 0.8rem;
+
+.dog{
+  
+  image-rendering: pixelated; /* Preferred modern approach */
+  image-rendering: -webkit-optimize-contrast; /* Older Webkit browsers */
+  image-rendering: crisp-edges; /* Wider compatibility */
+
+}
+
+.work-p{
+      font-size: var(--text-xl) /* 1.25rem = 20px */;
+    line-height: var(--tw-leading, var(--text-xl--line-height) /* calc(1.75 / 1.25) ≈ 1.4 */);
   font-weight: var(--font-weight-light);
-  font-size: var(--text-xl);
-  line-height: calc(var(--spacing) * 5); /* 1.25rem = 20px */
-} 
+}

@@ -19,8 +19,8 @@ export default function NavBarItem({title, href}: NavBarItemProps) {
 
   return (
     <>
-      <div className="text-amber-50  w-auto h-min ml-5 text-navbar-opt font-light border-0 flex justify-center align-text-bottom
-                         duration-250 hover:scale-105 active:scale-90">
+      <div className=" w-auto h-min ml-5 text-navbar-opt font-light border-0 flex justify-center align-text-bottom
+                          hover:scale-105 duration-250 active:scale-90">
 
 
         {

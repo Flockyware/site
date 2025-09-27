@@ -7,49 +7,45 @@ import Image from "next/image";
 export default function Contact() {
   return (
     <>
-      <div className="max-w-4xl w-full mx-auto text-white border-4 rounded-xl  text-3xl">
+      <div className=" w-full mx-auto  border-4 rounded-xl  text-3xl">
 
         <div className="flex ">
-          <h2 className="text-4xl/normal font-regular border-2 border-amber-900 ">
+          <h2 className="text-4xl/normal ml-5 font-light">
             Get in contact with me
           </h2>
         </div>
 
-        <div className=" mx-auto text-white border-t-4    text-3xl mb-auto">
+        <div className="mx-auto pb-10  border-t-4  text-3xl mb-auto">
 
-          <CallingCard></CallingCard>
+          {/* <CallingCard></CallingCard> */}
 
-          <div className="flex justify-center border-0 border-cyan-300">
+          <div className="flex justify-center animate-wiggle my-5">
             <Image
-              className="mx-auto"
-              src={"https://picsum.photos/200"}
-              width={200}
+              className="mx-auto dog"
+              unoptimized={true}
+              src={"/email.webp"}
+              width={400}
               height={200}
               alt="contact"
             />
           </div>
 
-          <div className="flex justify-center-safe">
+          <div className="flex justify-center-safe font-light">
             if you want to contact me you can send me an EMAIL to
           </div>
 
 
+          <div className=" flex justify-center px-40 font-regular my-5 text-bavaroa-500 underline ">
 
-          <div>
-            <Image
-              className="mx-auto"
-              src={"https://picsum.photos/300/100"}
-              width={300}
-              height={100}
-              alt="email"
-            />
+            <div className="email">contactflocky@<span>gmail.</span>com</div>
+
           </div>
 
-          <div className=" flex justify-center px-40  ">
+          <div className=" flex justify-center px-40  font-light">
             Or you can contact me at my socials for now, 
           </div>
 
-          <div className=" flex justify-center px-40  ">
+          <div className=" flex justify-center px-40  font-light">
             i try to read every message ❤
           </div>
 

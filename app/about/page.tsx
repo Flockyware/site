@@ -4,15 +4,15 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="max-w-4xl mx-auto text-white border-4 rounded-xl  text-3xl ">
+      <div className=" mx-auto  border-4 rounded-xl  text-3xl ">
           
         <div className="flex ">
-          <h2 className="text-4xl/normal font-regular border-2 border-amber-900 ">
-            About me
+          <h2 className="text-4xl/normal ml-5 font-light">
+            About Me
           </h2>
         </div>
 
-        <div className="bg-panel-trans  border-t-4   ">
+        <div className="  border-t-4   ">
           
           <CallingCard />
           
