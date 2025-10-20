@@ -1,13 +1,8 @@
 @import "tailwindcss";
 
-:root {
-  --background: oklch(98.7% 0.022 95.277);
-  --foreground: #da0c35;
 
- 
-  /* remember to make variable to navbar mainpage and footer for when you finished making them*/
-  /* --idk: #171717; */
-}
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 
 @theme{
@@ -42,11 +37,11 @@
       
   }
   
-  --animate-rainbow-effect: rainbow-effect 3s linear infinite; 
+  --animate-rainbow-effect: rainbow-effect 2.5s linear infinite; 
   @keyframes rainbow-effect{    
     0%{
       color:purple;
-    },    
+    }
     16%{
       color:red;
     }
@@ -68,15 +63,22 @@
       
   }
 
+  
+
   --spacing-main: calc(100vh - 40px - 100px );
 
   --text-primary: 5.5rem;
   --text-secondary: 3rem;
   --text-navbar-opt: 2.5rem;
 
+  --color-lighty-500: #f6f5f1;
+  --color-darky-500: #070707;
 
-  --color-moon-500: #1c2638;
-  --color-lighty-500: #fcfcfc;
+  --color-bsk-500: #0886FE;
+  --color-bsk-800: #086fd0 ;
+
+
+  /* --color-lighty-500: #fcfcfc; */
   --color-bavaroa-500: #EE1643;
   --color-bavaroa-800: #da0c35;
 
@@ -87,11 +89,11 @@
 
 html {
   
-  background:   /* hehe fc, fizzy */#f6f5f1;
-  color: #070707;
   font-family: 'Londrina Solid', system-ui;
   font-weight: 400;
+  
   /* font-family: 'Bubblegum Sans', sans-serif; */
+  background-color: #e5e5f7;
 
   /* background: var(--background);
   color: var(--foreground);
@@ -110,7 +112,9 @@ html {
 }
 
 .work-p{
-      font-size: var(--text-xl) /* 1.25rem = 20px */;
-    line-height: var(--tw-leading, var(--text-xl--line-height) /* calc(1.75 / 1.25) ≈ 1.4 */);
+  font-size: var(--text-2xl) /* 1.25rem = 20px */;
+  line-height: var(--tw-leading, var(--text-xl--line-height) /* calc(1.75 / 1.25) ≈ 1.4 */);
   font-weight: var(--font-weight-light);
+  margin-top: 1rem;
+  margin-inline: 1rem;
 }

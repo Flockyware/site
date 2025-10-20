@@ -1,8 +1,7 @@
-import CallingCard from "@/components/callingCard";
 import Image from "next/image";
-import { title } from "process";
-import { Children, Key } from "react";
+import {  Key } from "react";
 import { GetGamesWork } from "@/components/workList";
+import ExternalLinkSvg from "@/components/externalLink";
 
 
 
@@ -10,14 +9,14 @@ import { GetGamesWork } from "@/components/workList";
 
 export default function Work() {
   
-  const _list:any = GetGamesWork();
+  const _list = GetGamesWork();
 
   const items = _list.map( (x:workValue) => <WorkItem key={x.id} item={x}></WorkItem> );
   return (
     <>
       <div className=" w-full mx-auto border-4 rounded-xl  text-3xl">
         <h2 className="text-4xl/normal ml-5 font-light">
-          Stuff i've worked on
+          Stuff i&#39;ve worked on
         </h2>        
 
         <div className="border-t-4 py-5">
@@ -57,20 +56,14 @@ export default function Work() {
 
 interface workValue{
   id: Key,
-  title: String,
-  subtitle:String,
+  title: string,
+  subtitle:string,
   desc: string,
   date:Date,
-  url:String
+  url:string
 }
 
-function WorkList( _list:workValue[] ){
 
-  const work:any = []
-  return(
-    { work}
-  );
-}
 
 function WorkItem({ item }: { item: workValue }){
   
@@ -79,9 +72,10 @@ function WorkItem({ item }: { item: workValue }){
   return(
     <>
 
-      <div className="border-2 p-3 hover:border-bavaroa-500  duration-150 hover:border-2 active:scale-90  rounded-xl    w-92/100 m-auto  ">
-          {/*@ts-ignore*/}
-        <a href={item.url} className="flex " target="_blank">
+      <div className="border-3 p-3 rounded-xl w-92/100 m-auto  ">
+          
+        <div className="flex">
+          
           <Image
             className="rounded-xl"
             src={"https://picsum.photos/600/500/"}
@@ -89,16 +83,16 @@ function WorkItem({ item }: { item: workValue }){
             height={230}
             alt="Work_image"
           />
-          <div className="border-0 w-full h-min ml-5 ">
-            <p>{item.title} </p>
-            {/* {item.date.getFullYear()} */}
-            <div>{item.subtitle}</div>
-            <p className="work-p">
-              {item.desc}
+          <div className=" w-full h-min ml-5 ">
+            <a href={item.url} className="flex w-min hover:text-bavaroa-500 hover:underline duration-300 active:text-bavaroa-800 active:scale-90" target="_blank">{item.title} <ExternalLinkSvg className="scale-80"/></a>
+            
+            <div className="font-normal text-2xl mb-1">{item.subtitle}</div>
+            <p className="text-xl font-light  text-justify">
+              {addLineBreak(item.desc)}
             </p>
             
           </div>
-        </a>
+        </div>
       </div>
     
     </>
@@ -106,3 +100,13 @@ function WorkItem({ item }: { item: workValue }){
 }
 
 
+const addLineBreak = (str: string) =>
+  str.split('\n').map((subStr) => {
+    
+    return (
+      <>
+        {subStr}
+        <br />
+      </>
+    );
+  });

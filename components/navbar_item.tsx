@@ -1,12 +1,11 @@
 'use client'
 import { Url } from "next/dist/shared/lib/router/router";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 
 interface NavBarItemProps{
-    title: String,
+    title: string,
     href: Url
 }
 
@@ -14,13 +13,9 @@ interface NavBarItemProps{
 export default function NavBarItem({title, href}: NavBarItemProps) {
 
   const pathname:string = usePathname().toString();
-
-  console.log()
-
   return (
     <>
-      <div className=" w-auto h-min ml-5 text-navbar-opt font-light border-0 flex justify-center align-text-bottom
-                          hover:scale-105 duration-250 active:scale-90">
+      <div className=" w-auto h-min ml-5 text-navbar-opt font-light border-0 flex justify-center align-text-bottom hover:scale-105 duration-250 active:scale-90">
 
 
         {

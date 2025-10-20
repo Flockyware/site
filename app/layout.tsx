@@ -1,22 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 import NavBar from "@/components/navbar";
+import "./globals.css";
 import '@fontsource-variable/reem-kufi-fun'; // Supports weights 400-700
 import '@fontsource/londrina-solid/100.css';
 import '@fontsource/londrina-solid/300.css';
 import '@fontsource/londrina-solid/400.css';
 import '@fontsource/londrina-solid/900.css';
 import Footer from "@/components/footer";
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import GlobalContextProvider from "@/components/soundContext";
 
 export const metadata: Metadata = {
   title: "It's  a website ",
@@ -29,13 +20,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className=" max-w-4xl mx-auto max-h-screen h-screen flex flex-col">
-        <NavBar/>
+    <html lang="en"  >
+      <body className="dark:bg-darky-500 bg-lighty-500 duration-100 h-full">
+        <div className=" dark:text-lighty-500   max-w-4xl mx-auto max-h-screen h-screen flex flex-col">
+          <GlobalContextProvider>
 
-        {children}
-        
-        <Footer/>
+            <NavBar />
+
+            {children}
+
+            <Footer />
+
+          </GlobalContextProvider>
+        </div>
       </body>
     </html>
   );

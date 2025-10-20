@@ -1,10 +1,14 @@
-import NavBar from "@/components/navbar";
+'use client'
+import { GlobalContext } from "@/components/soundContext";
 import Image from "next/image";
+import { useContext } from "react";
 
 export default function Home() {
+
+  const global = useContext(GlobalContext)
   return (
     <>
-      <div className=" bg-opacity-50   my-auto">
+      <div className="border-2 border-amber-600 bg-opacity-50   my-auto">
 
 
         <div className=" border-amber-300 border-0 flex mt-3 " >
@@ -15,7 +19,7 @@ export default function Home() {
             <div className=" justify-center items-center">
               
               <h1 className="text-primary/25 w-full">
-                Hi! I'm Flocky
+                Hi! I&lsquo;m Flocky
               </h1>
 
               <div className="text-secondary items-center-safe text-center border-0 py-auto flex py-auto">
@@ -28,20 +32,32 @@ export default function Home() {
             </div>
 
 
-            
+
 
           </div>
 
           <div className="ml-auto border-0">
-            <Image className="dog"
-              // unoptimized = {true}
-              unoptimized = {true}
-             src={"/image-frontpage-v2.gif"}
-              //src={"https://picsum.photos/300"}
-              width={400}
-              height={400}
-              alt="placeholder"
-            />
+            {(global?.isDark === true) ? (
+              <Image className="dog"
+                unoptimized={true}
+                src={"/image-frontpage-v2-darkmode.gif"}
+                //src={"https://picsum.photos/300"}
+                width={400}
+                height={400}
+                alt="placeholder"
+              />
+            ) : (
+              <Image className="dog"
+                unoptimized={true}
+                src={"/image-frontpage-v2.gif"}
+                //src={"https://picsum.photos/300"}
+                width={400}
+                height={400}
+                alt="placeholder"
+              />
+            )}
+
+
           </div>
         </div>
 

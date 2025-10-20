@@ -1,14 +1,10 @@
 "use client";
-import Image from "next/image";
-import NavBarItem from "./navbar_item";
-import Link from "next/link";
-import { Children } from "react";
+
 import { FaBluesky } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { FaItchIo } from "react-icons/fa";
 
-// @ts-ignore <FontAwesomeIcon icon="fa-brands fa-youtube" />
 
 
 export default function Footer() {

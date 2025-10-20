@@ -1,15 +1,18 @@
 
 "use client";
-import Image from "next/image";
 import NavBarItem from "./navbar_item";
-import Link from "next/link";
-
+import MuteButton from "./muteButton";
+import DarkMode from "./darkmodebutton";
 export default function NavBar() {
   return (
     <>
 
-      <div className="flex items-center-safe justify-end border-0  h-auto my-5 w-full" >
-
+      <div className="flex border-0 items-center-safe justify-end  h-auto mb-5 mt-3 w-full" >
+        <div className="flex min-w-30 border-0 mr-auto felx ">
+          
+          <DarkMode/>
+          <MuteButton/>
+        </div>
         <NavBarItem href={"/"} title={"Home"}></NavBarItem>
         <NavBarItem href={"/about"} title={"About"}></NavBarItem>
         <NavBarItem href={"/work"} title={"Work"}></NavBarItem>
