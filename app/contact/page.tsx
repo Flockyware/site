@@ -1,4 +1,4 @@
-import ExternalLinkSvg from "@/components/externalLink";
+import ExternalLinkSvg from "@/components/svg/externalLink";
 import Image from "next/image";
 
 
@@ -17,7 +17,6 @@ export default function Contact() {
 
         <div className="mx-auto pb-10  border-t-4  text-3xl mb-auto">
 
-          {/* <CallingCard></CallingCard> */}
 
           <div className="flex justify-center animate-wiggle my-5">
             <Image
@@ -35,7 +34,7 @@ export default function Contact() {
           </div>
 
 
-          <div className=" flex justify-center px-40 font-regular my-5 text-bavaroa-500 underline  hover:text-bavaroa-800">
+          <div className="flex w-min justify-center mx-auto font-regular my-5 text-bavaroa-500 underline  hover:text-bavaroa-800 hover:scale-105 duration-200">
 
             <div className="email ">contactflocky@<span>gmail.</span>com</div>
 
@@ -50,16 +49,16 @@ export default function Contact() {
 
           <div className="text-gray-600 dark:text-gray-400 mb-4 flex justify-center font-light">
             {"("}preferably&nbsp; 
-            <a className="underline flex text-gray-300 hover:text-bsk-500 active:scale-90 active:text-bsk-800  duration-200" href="https://bsky.app/profile/flockyware.bsky.social" target="_blank">
+            <a className="underline flex hover:scale-103 text-gray-700 dark:text-gray-300 hover:text-bsk-500 active:scale-90 active:text-bsk-800  duration-200" href="https://bsky.app/profile/flockyware.bsky.social" target="_blank">
               bluesky
-            <ExternalLinkSvg className="scale-80"/> 
+            <ExternalLinkSvg /> 
             </a> 
             {")"}
           </div>
 
 
           <div className="flex justify-center px-40  font-light">
-            i try to read every message <p className="animate-rainbow-effect">❤</p>
+            <p className="animate-rainbow-effect">❤</p>I try to read every message!<p className="animate-rainbow-effect">❤</p>
           </div>
 
 

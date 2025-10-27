@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
 
-    <div className="justify-center w-full border-0 py-6 border-blue-800">
+    <div className="justify-center w-full border-0 py-6 border-blue-800 ">
 
       <div className="flex text-3xl font-light border-0 justify-center-safe ">
         {"My socials"}

@@ -7,6 +7,9 @@ interface GlobalContextType {
   setSoundEnable:  Dispatch<SetStateAction<boolean>>;
   isDark: boolean;
   setIsDark:  Dispatch<SetStateAction<boolean>>;
+  pitchRate:number;
+  setPitchRate: Dispatch<SetStateAction<number>>;
+  
 }
 export const GlobalContext = createContext<GlobalContextType | null>(null);
 
@@ -19,6 +22,8 @@ const GlobalContextProvider:React.FC<SoundProps> = ({children}) => {
 
   const [soundEnable, setSoundEnable] = useState<boolean>(true);
   const [isDark, setIsDark] = useState(false)
+  const [pitchRate, setPitchRate] = useState(0.45);
+  
   useEffect(() => {
     const htmlEl = document.querySelector('html');
     if (htmlEl) {
@@ -27,7 +32,7 @@ const GlobalContextProvider:React.FC<SoundProps> = ({children}) => {
   }, [isDark]);
 
   return (
-   <GlobalContext.Provider value={{soundEnable, setSoundEnable, isDark, setIsDark}}>
+   <GlobalContext.Provider value={{soundEnable, setSoundEnable, isDark, setIsDark,pitchRate, setPitchRate}}>
       {children} 
    </GlobalContext.Provider>
   );

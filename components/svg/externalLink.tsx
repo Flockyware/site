@@ -7,6 +7,7 @@ const ExternalLinkSvg = (props: SVGProps<SVGSVGElement>) => (
     height={25}
     fill="none"
     viewBox="0 0 24 24"
+    className="block w-auto m-auto my-auto mx-0 fill-current scale-80"
     {...props}
   >
     <path

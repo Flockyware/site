@@ -7,7 +7,7 @@ import '@fontsource/londrina-solid/300.css';
 import '@fontsource/londrina-solid/400.css';
 import '@fontsource/londrina-solid/900.css';
 import Footer from "@/components/footer";
-import GlobalContextProvider from "@/components/soundContext";
+import GlobalContextProvider from "@/components/globalContext";
 
 export const metadata: Metadata = {
   title: "It's  a website ",

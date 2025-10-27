@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import useSound from "use-sound";
-import { GlobalContext } from "./soundContext";
+import { GlobalContext } from "./globalContext";
 
 
 

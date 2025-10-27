@@ -2,8 +2,8 @@
 
 import {  useContext } from "react";
 import useSound from "use-sound";
-import { SoundOff, SoundOn } from "./soundSVG";
-import { GlobalContext } from "./soundContext";
+import { SoundOff, SoundOn } from "./svg/soundSVG";
+import { GlobalContext } from "./globalContext";
 
 
 export default function MuteButton() {

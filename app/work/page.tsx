@@ -1,7 +1,8 @@
 import Image from "next/image";
 import {  Key } from "react";
 import { GetGamesWork } from "@/components/workList";
-import ExternalLinkSvg from "@/components/externalLink";
+import ExternalLinkSvg from "@/components/svg/externalLink";
+import React from "react";
 
 
 
@@ -14,34 +15,20 @@ export default function Work() {
   const items = _list.map( (x:workValue) => <WorkItem key={x.id} item={x}></WorkItem> );
   return (
     <>
-      <div className=" w-full mx-auto border-4 rounded-xl  text-3xl">
+      <div className=" w-full mx-auto border-4  rounded-xl text-3xl ">
         <h2 className="text-4xl/normal ml-5 font-light">
           Stuff i&#39;ve worked on
         </h2>        
 
-        <div className="border-t-4 py-5">
+        <div className="border-t-4 overflow-y-scroll max-h-120 ">
 
-          <div className=" text-4xl font-light flex justify-center-safe">
-            
+          <div className="mt-5 text-4xl font-light flex mx-auto w-90/100">
+            Games
           </div>
 
-          <div className=" py-5 grid grid-cols-1">
-            {/* <WorkItem
-              item={
-                { 
-                  title:"Hellow",
-                  subtitle:"hola",
-                  year:"2025",
-                  url:"https://ncase.me/"
-                }
-              }
-            /> */}
-            
-            {
-              items
-            }
+          <div className="py-5  grid grid-cols-1">
 
-            
+            {items}
 
           </div>
         </div>
@@ -58,6 +45,7 @@ interface workValue{
   id: Key,
   title: string,
   subtitle:string,
+  img:string,
   desc: string,
   date:Date,
   url:string
@@ -72,41 +60,44 @@ function WorkItem({ item }: { item: workValue }){
   return(
     <>
 
-      <div className="border-3 p-3 rounded-xl w-92/100 m-auto  ">
+      <div className="border-4  p-3 rounded-xl w-92/100 m-auto  ">
           
         <div className="flex">
-          
           <Image
-            className="rounded-xl"
-            src={"https://picsum.photos/600/500/"}
-            width={280}
-            height={230}
-            alt="Work_image"
+              className="rounded-xl  object-cover"
+              src={item.img}
+              //src={"https://picsum.photos/600/500/"}
+              width={250}
+              height={150}
+              alt="Work_image"
           />
-          <div className=" w-full h-min ml-5 ">
-            <a href={item.url} className="flex w-min hover:text-bavaroa-500 hover:underline duration-300 active:text-bavaroa-800 active:scale-90" target="_blank">{item.title} <ExternalLinkSvg className="scale-80"/></a>
+          <div className=" w-full h-min ml-8 ">
+            <a href={item.url} className="flex w-min hover:text-bavaroa-500 hover:underline duration-300 active:text-bavaroa-800 active:scale-90" target="_blank">{item.title} <ExternalLinkSvg/></a>
             
-            <div className="font-normal text-2xl mb-1">{item.subtitle}</div>
-            <p className="text-xl font-light  text-justify">
+            <p className="text-xl/snug font-light mt-3 text-justify pr-20">
               {addLineBreak(item.desc)}
             </p>
             
           </div>
         </div>
       </div>
-    
+      <hr className=" w-91/100 mx-auto opacity-25 my-6  border-1"/>
+
     </>
   );
 }
 
 
 const addLineBreak = (str: string) =>
-  str.split('\n').map((subStr) => {
+  str.split('\n').map((subStr, index) => {
     
+    <React.Fragment key={index}/>
     return (
       <>
         {subStr}
         <br />
+        <br />
+
       </>
     );
   });

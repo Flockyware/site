@@ -1,5 +1,5 @@
 'use client'
-import { GlobalContext } from "@/components/soundContext";
+import { GlobalContext } from "@/components/globalContext";
 import Image from "next/image";
 import { useContext } from "react";
 
@@ -8,10 +8,10 @@ export default function Home() {
   const global = useContext(GlobalContext)
   return (
     <>
-      <div className="border-2 border-amber-600 bg-opacity-50   my-auto">
+      <div className="   my-auto">
 
 
-        <div className=" border-amber-300 border-0 flex mt-3 " >
+        <div className="flex mt-3 " >
 
 
           <div className="ml-5 max-w-120 border-0 mt-15">
@@ -24,7 +24,7 @@ export default function Home() {
 
               <div className="text-secondary items-center-safe text-center border-0 py-auto flex py-auto">
                 <div className="border-0">
-                  I enjoy making 
+                  I enjoy making
                 </div>
                 <span className="ml-2 animate-rainbow-effect border-0 flex"> stuff </span> <span className="ml-2 animate-rainbow-effect duration-200 hover:text-7xl hover:translate-y-0.5">❤</span>  {/*❤*/}   
               </div>

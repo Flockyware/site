@@ -93,7 +93,8 @@ html {
   font-weight: 400;
   
   /* font-family: 'Bubblegum Sans', sans-serif; */
-  background-color: #e5e5f7;
+  /*background-color: #e5e5f7;*/
+  border: 5px;
 
   /* background: var(--background);
   color: var(--foreground);
@@ -117,4 +118,5 @@ html {
   font-weight: var(--font-weight-light);
   margin-top: 1rem;
   margin-inline: 1rem;
+  padding: 0rem 1.5rem;
 }
