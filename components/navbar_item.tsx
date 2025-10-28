@@ -15,7 +15,7 @@ export default function NavBarItem({title, href}: NavBarItemProps) {
   const pathname:string = usePathname().toString();
   return (
     <>
-      <div className=" w-auto h-min ml-5 text-navbar-opt font-light border-0 flex justify-center align-text-bottom hover:scale-105 duration-250 active:scale-90">
+      <div className=" w-auto h-min mx-1.5 md:ml-5 md:text-navbar-opt text-[1.4rem] font-light border-0 flex justify-center align-text-bottom hover:scale-105 duration-250 active:scale-90">
 
 
         {

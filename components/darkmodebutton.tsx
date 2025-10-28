@@ -5,6 +5,8 @@ import { MdLightMode } from "react-icons/md";
 import { MdDarkMode } from "react-icons/md";
 import useSound from "use-sound";
 import { GlobalContext } from "./globalContext";
+import SunSvg from "./svg/sunSvg";
+import MoonSvg from "./svg/moonSvg";
 
 
 
@@ -20,16 +22,16 @@ export default function DarkMode() {
 
     return (
         <>
-            <div className="flex mr-auto">
+            <div className="flex mr-3 md:mr-auto ml-3 md:ml-0">
                 <button
                     onClick={() => global?.setIsDark(!global.isDark)}
                     onMouseDown={() => playDown()}
                     onMouseUp={() => playUp()}
                 >
                     {(global?.isDark == false) ? (
-                        <MdDarkMode className="size-11 m-auto hover:scale-110 duration-250 active:scale-85" />
+                        <MoonSvg className="hover:scale-110 duration-250 active:scale-85 w-[30px] md:w-auto"/>
                     ) : (
-                        <MdLightMode className="size-11 m-auto hover:scale-110 duration-250 active:scale-85" />
+                        <SunSvg className="hover:scale-110 duration-250 active:scale-85 w-[30px] md:w-auto"/>
                     )}            
                 </button>
             </div>

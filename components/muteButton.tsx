@@ -16,7 +16,7 @@ export default function MuteButton() {
     
   return (
     <>
-      <div className="flex ">
+      <div className="flex">
         <button
           //onClick={() => sound?.setSoundEnable(!sound.soundEnable)}
           onMouseDown={() => playDown()}
@@ -29,10 +29,10 @@ export default function MuteButton() {
         >
           {
             (global?.soundEnable == true) ? (
-              <SoundOn className="hover:scale-110 duration-250 active:scale-85"/>          
+              <SoundOn className="hover:scale-110 duration-250 active:scale-85 w-[40px] md:w-auto"/>          
             ) : 
             (
-              <SoundOff className="hover:scale-110 duration-250 active:scale-85 "/>
+              <SoundOff className="hover:scale-110 duration-250 active:scale-85 w-[40px] md:w-auto"/>
             )
           }
         </button>

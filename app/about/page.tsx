@@ -18,7 +18,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="border-t-4  pt-5 overflow-y-scroll max-h-125 ">
+        <div className="border-t-4  pt-5 md:overflow-y-scroll md:max-h-125">
           
           <CallingCard  />
           <div className="md:grid md:grid-cols-2 md:gap-5 mt-4  max-w-190 mx-auto">
@@ -68,14 +68,19 @@ export default function Home() {
           
           <div className="my-5">
 
-            <p className="work-p border-2">
-              Im flocky, i dedicate to mostly to software and game development, i love the problem solving and learning how to do something or how something is done 
+            <p className="text-xl/normal font-light mx-auto w-88/100 border- text-center md:text-left">
+              Hi there! i'm dedicated mostly to software and game development, i love the problem solving and just to sit down and try to figure out how something it's done
             </p>
-            
-            <p className="work-p ">
-              I live in Venezuela, as a graduated in Software Development and im tryng to make the most  
+            <br />
+            <p className="text-xl/snug font-light  w-88/100 mx-auto border- text-center md:text-left">
+              I live in South America, as a graduated in <p >Computer Science</p> and im tryng to make the most of my pasions  
             </p>
 
+            
+            <br />
+            <p className="text-xl/snug font-light  w-88/100 mx-auto border- text-center md:text-left">
+              I hope you look forward whatever me of the future is on!
+            </p>
           </div>
 
         </div> 

@@ -4,8 +4,8 @@ export default function CallingCard() {
   return (
     <>
 
-      <div className="justify-center bg-white dark:bg-slate-900  border-2 p-3 flex rounded-2xl max-w-165 mx-auto    ">
-        <div className="border-2 rounded-full flex h-min">
+      <div className=" bg-white dark:bg-slate-900  md:border-2 p-3 md:flex rounded-2xl md:max-w-165 w-full mx-auto  flex-1 justify-center  ">
+        <div className="border-2 rounded-full flex h-min max-w-[150px] mx-auto md:mx-0">
           <Image
             className="rounded-full duration-250 hover:scale-105"
             src={"/logo.svg"}
@@ -16,11 +16,11 @@ export default function CallingCard() {
           {/* <Image src={"/codec_snake.jpg"} width={176} height={176} alt="snake"></Image> */}
         </div>
 
-        <div className="flex-1  ">
-          <div className=" m-10">
+        <div className="md:flex-1">
+          <div className="my-1 md:m-10">
             
-            <div className=" text-4xl">Flocky!</div>
-            <div className="text-lg/5 font-light   ">Freelance Programmer,  Game Developer and Designer</div>
+            <div className=" text-4xl text-center md:text-start ">Flocky!</div>
+            <div className="text-lg/5 font-light text-center md:text-start px-10 md:px-0 ">Freelance Programmer,  Game Developer and Designer, </div>
 
           </div>
         </div>

@@ -8,27 +8,26 @@ export default function Home() {
   const global = useContext(GlobalContext)
   return (
     <>
-      <div className="   my-auto">
+      <div className="my-auto">
 
 
-        <div className="flex mt-3 " >
+        <div className="md:flex mt-3 " >
 
 
-          <div className="ml-5 max-w-120 border-0 mt-15">
+          <div className="  border-0 mt-15">
 
             <div className=" justify-center items-center">
               
-              <h1 className="text-primary/25 w-full">
+              <h1 className="md:text-primary/25 w-full text-center md:text-left text-5xl">
                 Hi! I&lsquo;m Flocky
               </h1>
 
-              <div className="text-secondary items-center-safe text-center border-0 py-auto flex py-auto">
-                <div className="border-0">
-                  I enjoy making
-                </div>
-                <span className="ml-2 animate-rainbow-effect border-0 flex"> stuff </span> <span className="ml-2 animate-rainbow-effect duration-200 hover:text-7xl hover:translate-y-0.5">❤</span>  {/*❤*/}   
-              </div>
+              <div className="flex-inline  items-center  mx-auto text-center md:text-left text-2xl md:text-secondary">  
+                I enjoy making
+                <span className="ml-2 animate-rainbow-effect "> stuff </span>
+                <span className="w-min ml-1 animate-rainbow-effect duration-200  active:scale-95">❤</span>  {/*❤*/}   
 
+              </div>
             </div>
 
 
@@ -36,7 +35,7 @@ export default function Home() {
 
           </div>
 
-          <div className="ml-auto border-0">
+          <div className="md:ml-auto mx-auto h-[75%] w-[75%] md:h-auto md:w-auto">
             {(global?.isDark === true) ? (
               <Image className="dog"
                 unoptimized={true}

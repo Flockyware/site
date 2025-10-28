@@ -9,19 +9,19 @@ import { FaItchIo } from "react-icons/fa";
 
 export default function Footer() {
 
-  const iconClasses: string = "size-10  m-auto min hover:scale-110 duration-250 active:scale-90 duration-200"
+  const iconClasses: string = "size-10  m-auto  hover:scale-110 duration-250 active:scale-90 duration-200"
 
   return (
 
-    <div className="justify-center w-full border-0 py-6 border-blue-800 ">
+    <div className="justify-center w-full py-6  ">
 
-      <div className="flex text-3xl font-light border-0 justify-center-safe ">
+      <div className="flex text-3xl font-light  justify-center-safe ">
         {"My socials"}
       </div>
 
-      <div className=" justify-center-safe mt-2 border-0 border-amber-300">
+      <div className=" justify-center-safe mt-2  ">
 
-        <div className="flex w-1/3 mx-auto">
+        <div className="flex md:w-1/3 mx-auto ">
           <a href="https://github.com/Flockyware" className={iconClasses} target="_blank">
             <IoLogoGithub className={iconClasses} />
           </a>
