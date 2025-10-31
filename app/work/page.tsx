@@ -1,11 +1,10 @@
 'use client'
 import Image from "next/image";
-import {  Key, useContext } from "react";
+import {  Key } from "react";
 import { GetGamesWork } from "@/components/workList";
 import ExternalLinkSvg from "@/components/svg/externalLink";
 import React from "react";
-import useSound from "use-sound";
-import { GlobalContext } from "@/components/globalContext";
+
 
 
 
@@ -57,14 +56,7 @@ interface workValue{
 
 
 function WorkItem({ item }: { item: workValue }) {
-  const global = useContext(GlobalContext);
   
-  const [onhover] = useSound('/sfx/href_pos_sfx.mp3', {
-    playbackRate: 1.1,
-    volume: 0.50,
-    soundEnabled: global?.soundEnable,
-    interrupt: true
-  });
 
 
   return (
@@ -98,7 +90,7 @@ function WorkItem({ item }: { item: workValue }) {
 
 
 const addLineBreak = (str: string) =>
-  str.split('\n').map((subStr, index) => {
+  str.split('\n').map((subStr) => {
     
     if(subStr.localeCompare(str.split('\n')[str.split('\n').length-1]) != 0 ){
       return (

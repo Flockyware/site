@@ -1,6 +1,5 @@
 'use client'
 import { BskComp, EmailComp } from "@/components/linkComponents";
-import ExternalLinkSvg from "@/components/svg/externalLink";
 import Image from "next/image";
 import useSound from "use-sound";
 import { useContext, useState } from "react";

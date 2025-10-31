@@ -3,7 +3,6 @@ import { BigHeart } from "@/components/bigHeart";
 import { GlobalContext } from "@/components/globalContext";
 import Image from "next/image";
 import { useContext } from "react";
-import useSound from "use-sound";
 
 export default function Home() {
 

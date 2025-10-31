@@ -68,7 +68,7 @@ export default function Home() {
           <div className="my-5">
 
             <p className="text-xl/normal font-light mx-auto w-85/100  md:w-88/100   md:text-left">
-              Hi there! i'm dedicated mostly to software and game development, i love to...
+              Hi there! i&apos;m dedicated mostly to software and game development, i love to...
             </p>
 
             <ul className="text-xl/normal font-light mx-auto  w-80/100 list-disc">
@@ -96,8 +96,8 @@ export default function Home() {
               Language Proficiency:
             </div>
             <ul className="text-xl/normal font-light mx-auto  w-80/100 list-disc">
-              <li>I'm a native <b>Spanish</b> speaker and</li>
-              <li>I'm fluent in <b>English</b> {"(C1 - CEFR)"}</li>
+              <li>I&apos;m a native <b>Spanish</b> speaker and</li>
+              <li>I&apos;m fluent in <b>English</b> {"(C1 - CEFR)"}</li>
             </ul>
 
             <br />

@@ -13,8 +13,8 @@ import MoonSvg from "./svg/moonSvg";
 export default function DarkMode() {
 
     const global = useContext(GlobalContext)
-    const [playDown] = useSound('/sfx/button_click_004_down.mp3',{volume:0.95, soundEnabled:global?.soundEnable});
-    const [playUp] = useSound('/sfx/button_click_004_up.mp3',{volume:0.95, soundEnabled:global?.soundEnable});
+    // const [playDown] = useSound('/sfx/button_click_004_down.mp3',{volume:0.95, soundEnabled:global?.soundEnable});
+    // const [playUp] = useSound('/sfx/button_click_004_up.mp3',{volume:0.95, soundEnabled:global?.soundEnable});
     const [dmsfx] = useSound('/sfx/ngt_bell_sfx.mp3', {
         playbackRate: 1,
         volume: 0.80,
