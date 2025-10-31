@@ -1,10 +1,18 @@
+'use client'
+import { BskComp, EmailComp } from "@/components/linkComponents";
 import ExternalLinkSvg from "@/components/svg/externalLink";
 import Image from "next/image";
+import useSound from "use-sound";
+import { useContext, useState } from "react";
+import { GlobalContext } from "@/components/globalContext";
+
+
 
 
 
 
 export default function Contact() {
+  
   return (
     <>
       <div className=" w-full mx-auto  border-4 rounded-xl  text-3xl ">
@@ -34,38 +42,47 @@ export default function Contact() {
           </div>
 
 
-          <div className="flex w-min justify-center text-xl md:text-2xl mx-auto font-regular my-5 text-bavaroa-500   hover:text-bavaroa-800 hover:scale-105 duration-200">
-
-            <div className="inline-flex">contactflocky <span className="">&nbsp;{"[at]"}&nbsp;</span><span>gmail</span><span>&nbsp;{"[dot]"}&nbsp;</span>com</div>
-
-          </div>
+          <EmailComp/>
 
           <div className=" flex justify-center font-light">
            <p className="text-center md:text-left">
             Or you can contact me at my socials for now&nbsp;
             </p>  
-
           </div>
-
-          <div className="text-gray-600 dark:text-gray-400 mb-4 flex justify-center font-light">
-            {"("}preferably&nbsp; 
-            <a className="underline flex hover:scale-103 text-gray-700 dark:text-gray-300 hover:text-bsk-500 active:scale-90 active:text-bsk-800  duration-200" href="https://bsky.app/profile/flockyware.bsky.social" target="_blank">
-              bluesky
-            <ExternalLinkSvg /> 
-            </a> 
-            {")"}
-          </div>
-
+            <BskComp/>
+          
 
           <div className="flex justify-center md:px-40 px-10  font-light">
-            <p className="w-auto m-auto my-auto mx-0 animate-rainbow-effect ">❤</p>
+            <MiniHeart/>
             <p className="text-center">I try to read every message!</p>
-            <p className="w-auto m-auto my-auto mx-0 animate-rainbow-effect ">❤</p>
+            <MiniHeart/>
           </div>
 
 
         </div>
       </div>
     </>
+  );
+}
+
+const MiniHeart = ()=>{
+  const global = useContext(GlobalContext);
+  const [pitch, setPitch] = useState(0.70);
+  
+  const CapPitch = (n:number) => {
+    if (n>1.5){
+      return n;
+    }else{
+      return n +0.05;
+    }
+  }
+  const [press] = useSound('/sfx/snd_power.wav', {
+    playbackRate: pitch,
+    volume: 0.50,
+    soundEnabled: global?.soundEnable,
+    interrupt: true
+  });
+  return(
+    <button onClick={()=>{setPitch(CapPitch(pitch)); press();}} className="w-auto m-auto my-auto mx-0 animate-rainbow-effect  hover:scale-110 active:scale-95 duration-200">❤</button>
   );
 }

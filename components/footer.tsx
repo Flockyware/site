@@ -4,13 +4,23 @@ import { FaBluesky } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { FaItchIo } from "react-icons/fa";
+import useSound from "use-sound";
+import { useContext } from "react";
+import { GlobalContext } from "./globalContext";
 
 
 
 export default function Footer() {
 
   const iconClasses: string = "size-10  m-auto  hover:scale-110 duration-250 active:scale-90 duration-200"
-
+  const global = useContext(GlobalContext);
+  const [onhover] = useSound('/sfx/href_pos_sfx.mp3', {
+    playbackRate: 0.7,
+    volume: 0.4,
+    soundEnabled: global?.soundEnable,
+    interrupt: true
+  });
+  
   return (
 
     <div className="justify-center w-full py-6  ">
@@ -22,24 +32,26 @@ export default function Footer() {
       <div className=" justify-center-safe mt-2  ">
 
         <div className="flex md:w-1/3 mx-auto ">
-          <a href="https://github.com/Flockyware" className={iconClasses} target="_blank">
+          <a href="https://github.com/Flockyware" className={iconClasses} target="_blank" onMouseEnter={()=>onhover()} >
             <IoLogoGithub className={iconClasses} />
           </a>
 
-          <a href="https://bsky.app/profile/flockyware.bsky.social" className={iconClasses} target="_blank">
+          <a href="https://bsky.app/profile/flockyware.bsky.social" className={iconClasses} target="_blank" onMouseEnter={()=>onhover()} >
             <FaBluesky className={iconClasses} />
           </a>
 
-          <a href="https://www.youtube.com/@Flokyware" className={iconClasses} target="_blank">
+          <a href="https://www.youtube.com/@Flokyware" className={iconClasses} target="_blank" onMouseEnter={()=>onhover()} >
             <FaYoutube className={iconClasses} />
           </a>
 
-          <a href="https://flockyware.itch.io/" className={iconClasses} target="_blank">
+          <a href="https://flockyware.itch.io/" className={iconClasses} target="_blank" onMouseEnter={()=>onhover()} >
             <FaItchIo className={iconClasses} />
           </a>
         </div>
 
       </div>
+
+     
     </div>
 
   );

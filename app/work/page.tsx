@@ -1,8 +1,11 @@
+'use client'
 import Image from "next/image";
-import {  Key } from "react";
+import {  Key, useContext } from "react";
 import { GetGamesWork } from "@/components/workList";
 import ExternalLinkSvg from "@/components/svg/externalLink";
 import React from "react";
+import useSound from "use-sound";
+import { GlobalContext } from "@/components/globalContext";
 
 
 
@@ -22,7 +25,7 @@ export default function Work() {
 
         <div className="border-t-4 md:overflow-y-scroll md:max-h-120 ">
 
-          <div className="mt-5 text-4xl font-light flex mx-auto w-90/100">
+          <div className="mt-5 text-4xl font-light md:flex mx-auto w-90/100 text-center md:text-left">
             Games
           </div>
 
@@ -53,18 +56,25 @@ interface workValue{
 
 
 
-function WorkItem({ item }: { item: workValue }){
+function WorkItem({ item }: { item: workValue }) {
+  const global = useContext(GlobalContext);
   
+  const [onhover] = useSound('/sfx/href_pos_sfx.mp3', {
+    playbackRate: 1.1,
+    volume: 0.50,
+    soundEnabled: global?.soundEnable,
+    interrupt: true
+  });
 
 
-  return(
+  return (
     <>
 
       <div className="md:border-4  md:p-3 rounded-xl md:w-92/100 m-auto  ">
-          
+
         <div className="md:flex">
           <Image
-            className="rounded-xl  object-cover  h-[150px]  md:h-[200px] mx-auto"
+            className="rounded-xl  object-cover  h-[150px]  md:h-[250px] mx-auto"
             src={item.img}
             //src={"https://picsum.photos/600/500/"}
             width={250}
@@ -72,16 +82,16 @@ function WorkItem({ item }: { item: workValue }){
             alt="Work_image"
           />
           <div className=" md:w-full h-min md:ml-8 px-4 md:px-0 mt-2">
-            <a href={item.url} className="flex w-min hover:text-bavaroa-500 hover:underline duration-300 active:text-bavaroa-800 active:scale-90" target="_blank">{item.title} <ExternalLinkSvg/></a>
-            
+            <a  href={item.url} className="flex flex-nowrap hover:text-bavaroa-500 hover:underline duration-300 active:text-bavaroa-800 active:scale-90" target="_blank">{item.title} <ExternalLinkSvg /></a>
+
             <p className="md:text-xl/snug text-xl/tight font-light mt-3 text-left md:pr-10">
               {addLineBreak(item.desc)}
             </p>
-            
+
           </div>
         </div>
       </div>
-      <hr className=" w-91/100 mx-auto opacity-25 md:my-6 my-3  border-1"/>
+      <hr className=" w-91/100 mx-auto opacity-25 md:my-6 my-3  border-1" />
     </>
   );
 }

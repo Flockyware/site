@@ -1,7 +1,9 @@
 'use client'
+import { BigHeart } from "@/components/bigHeart";
 import { GlobalContext } from "@/components/globalContext";
 import Image from "next/image";
 import { useContext } from "react";
+import useSound from "use-sound";
 
 export default function Home() {
 
@@ -25,8 +27,7 @@ export default function Home() {
               <div className="flex-inline  items-center  mx-auto text-center md:text-left text-2xl md:text-secondary">  
                 I enjoy making
                 <span className="ml-2 animate-rainbow-effect "> stuff </span>
-                <span className="w-min ml-1 animate-rainbow-effect duration-200  active:scale-95">❤</span>  {/*❤*/}   
-
+                <BigHeart/>
               </div>
             </div>
 
@@ -65,3 +66,4 @@ export default function Home() {
     </>
   );
 }
+

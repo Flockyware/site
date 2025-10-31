@@ -4,13 +4,22 @@ import NavBarItem from "./navbar_item";
 import MuteButton from "./muteButton";
 import DarkMode from "./darkmodebutton";
 import { Squash as Hamburger } from 'hamburger-react'
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import useSound from "use-sound";
+import { GlobalContext } from "./globalContext";
 
 export default function NavBar() {
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(false);
 
+  const global = useContext(GlobalContext);
+  const [sound] = useSound('/sfx/button_pressed_3.mp3', {
+    playbackRate: 0.9,
+    volume: 0.70,
+    soundEnabled: global?.soundEnable,
+    interrupt: true
+  });
   return (
     <>
 
@@ -27,7 +36,7 @@ export default function NavBar() {
           <NavBarItem href={"/contact"} title={"Contact"}></NavBarItem>
         </div>
         <div className="justify-center mr-2 md:hidden hover:scale-95 duration-200 active:scale-80">
-          <Hamburger toggled={isOpen} toggle={setOpen} />
+          <Hamburger toggled={isOpen} toggle={setOpen} onToggle={()=>sound()} />
         </div>
 
 
@@ -40,7 +49,7 @@ export default function NavBar() {
 }
 
 const MobileNavbar = ()=>{
-
+  
   return(
     <>
       <div className="bg-gray-400 md:hidden ">
@@ -56,18 +65,24 @@ const MobileNavbar = ()=>{
 const ItemMobile:React.FC<MobileProps> = ({href, title})=>{
 
   const pathname:string = usePathname().toString();
-
+  const global = useContext(GlobalContext);
+  const [sound] = useSound('/sfx/button_pressed_2.mp3', {
+    playbackRate: 0.7,
+    volume: 0.70,
+    soundEnabled: global?.soundEnable,
+    interrupt: true
+  });
   if (pathname == href.toString()) {
     return (
       <div className="text-center bg-bavaroa-500 active:scale-x-95 active:duration-200">
-        <Link className="my-auto  text-lighty-500 text-xl " href={href} > {title} </Link>
+        <Link onClick={()=>sound()} className="my-auto  text-lighty-500 text-xl " href={href} > {title} </Link>
       </div>
     );
   } else {
     return (
       <>
         <div className="text-center active:scale-85 duration-200 bg-lighty-500 dark:bg-darky-500">
-          <Link className="my-auto text-xl" href={href}>{title}</Link>
+          <Link onClick={()=>sound()} className="my-auto text-xl" href={href}>{title}</Link>
         </div>
 
       </>

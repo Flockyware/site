@@ -20,7 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en"  >
+      <script data-goatcounter="https://floky.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
       <body className="dark:bg-darky-500 bg-lighty-500 duration-100 h-full">
         <div className=" dark:text-lighty-500   max-w-4xl mx-auto max-h-screen h-screen flex flex-col">
           <GlobalContextProvider>

@@ -2,6 +2,9 @@
 import { Url } from "next/dist/shared/lib/router/router";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useContext } from "react";
+import useSound from "use-sound";
+import { GlobalContext } from "./globalContext";
 
 
 interface NavBarItemProps{
@@ -11,7 +14,13 @@ interface NavBarItemProps{
 
 
 export default function NavBarItem({title, href}: NavBarItemProps) {
-
+  const global = useContext(GlobalContext);
+  const [sound] = useSound('/sfx/button_pressed_2.mp3', {
+    playbackRate: 0.7,
+    volume: 0.70,
+    soundEnabled: global?.soundEnable,
+    interrupt: true
+  });
   const pathname:string = usePathname().toString();
   return (
     <>
@@ -20,9 +29,9 @@ export default function NavBarItem({title, href}: NavBarItemProps) {
 
         {
          (pathname == href.toString()) ?
-         <Link className="my-auto text-bavaroa-500 underline" href={href} > {title} </Link> 
+         <Link className="my-auto text-bavaroa-500 underline" href={href} onClick={()=>sound()} > {title} </Link> 
          : 
-          <Link className="my-auto " href={href}>{title}</Link>
+          <Link className="my-auto " href={href} onClick={()=>sound()}>{title}</Link>
         }
 
       </div>
